@@ -8,7 +8,7 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <section className="max-w-screen-lg w-11/12 mx-auto">
+      <section className="">
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
