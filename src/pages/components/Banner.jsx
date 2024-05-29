@@ -45,7 +45,7 @@ const Banner = () => {
             </svg>
           </Link>
         </div>
-        <div className="mx-auto"> pasdasdasdasassadd</div>
+        <div className="mx-auto"> yeison cabro</div>
       </div>
     </div>
   );
