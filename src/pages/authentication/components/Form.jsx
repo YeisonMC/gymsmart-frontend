@@ -1,11 +1,15 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AuthContext } from "../../../context/AuthContext";
 
 const Form = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
+  const { login } = useContext(AuthContext);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -21,6 +25,7 @@ const Form = () => {
         data
       );
       console.log(result.data);
+      login(result.data.user);
       toast.success("Inicio de sesión exitoso. Redirigiendo...", {
         position: "top-right",
         autoClose: 2000,
@@ -33,7 +38,7 @@ const Form = () => {
         transition: Slide,
       });
       setTimeout(() => {
-        window.location.href = "/customerhomepage";
+        navigate("/user/", { replace: true });
       }, 2000);
     } catch (error) {
       toast.dismiss();
@@ -53,7 +58,10 @@ const Form = () => {
   };
 
   return (
-    <form className="sm:max-w-xl sm:mx-auto px-4 py-10 bg-[rgba(0,0,0,.1)] backdrop-blur-lg mx-8 md:mx-0 rounded-xl sm:p-10">
+    <form
+      className="sm:max-w-xl sm:mx-auto px-4 py-10 bg-[rgba(0,0,0,.1)] backdrop-blur-lg mx-8 md:mx-0 rounded-xl sm:p-10"
+      onSubmit={handleLogin}
+    >
       <div className="max-w-md mx-auto">
         <div className="mt-5">
           <label className="font-semibold text-sm text-gray-600 pb-1 block">
@@ -88,7 +96,6 @@ const Form = () => {
           <button
             className="py-2 px-4 bg-color-rojo   text-white w-full transition ease-in duration-300 text-center font-semibold shadow-md rounded-lg"
             type="submit"
-            onClick={handleLogin}
           >
             Iniciar sesión
           </button>

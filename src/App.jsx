@@ -1,24 +1,29 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/authentication/LoginPage";
 import { ToastContainer, Slide } from "react-toastify";
-import CustomerHomePage from "./pages/client/CustomerHomePage";
+import RouterApp from "./routes/RouterApp";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./routes/ProtectedRoute";
+import RouterAuth from "./routes/RouterAuth";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <section className="">
+      <AuthProvider>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/customerhomepage" element={<CustomerHomePage />} />
+          <Route path="/*" element={<RouterApp />} />
+          <Route
+            path="/user/*"
+            element={
+              <ProtectedRoute>
+                <RouterAuth />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
-      </section>
-      <Footer />
+        <Footer />
+      </AuthProvider>
       <ToastContainer
         position="top-right"
         autoClose={2300}

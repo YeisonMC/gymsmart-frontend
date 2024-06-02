@@ -2,7 +2,6 @@ import React from "react";
 import BannerImage from "../../assets/img/home/banner.jpg";
 import { Link } from "react-router-dom";
 import Form from "./components/Form";
-
 const LoginPage = () => {
   return (
     <section className="relative bg-gradient-to-r h-screen text-white overflow-hidden">
