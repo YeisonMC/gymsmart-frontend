@@ -18,7 +18,7 @@ const ProtectedRoute = ({ children }) => {
   //     return <Navigate to="/login" replace />;
   //   }
   // };
-  // console.log(user);
+  console.log(user);
 
   const storedUser2 =
     localStorage.getItem("user") || console.log("no estas logeado");

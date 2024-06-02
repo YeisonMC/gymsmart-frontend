@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import UserNavbar from "../components/auth/UserNavbar";
-import CustomerHomePage from "../pages/client/CustomerHomePage";
+import HomeUsuario from "../pages/client/HomeUsuario";
 import NotFound from "../pages/error/NotFound";
 import ProtectedRoute from "./ProtectedRoute";
 import LoginPage from "../pages/authentication/LoginPage";
@@ -11,7 +11,7 @@ const RouterAuth = () => {
     <>
       <UserNavbar />
       <Routes>
-        <Route path="/" element={<CustomerHomePage />} />
+        <Route path="/" element={<HomeUsuario />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
