@@ -2,25 +2,38 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const SeccionCard = () => {
-  const [store, setStore] = useState([]);
+  const [cursos, setCursos] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/gym/smart/api/get/cursos")
-      .then((response) => setStore(response.data))
-      .catch((error) => console.log("Error en la API ", error));
+    const fetchCursos = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:3000/gym/smart/api/get/cursos"
+        );
+        setCursos(response.data);
+      } catch (error) {
+        console.error("Error al obtener los cursos:", error);
+      }
+    };
+
+    fetchCursos();
   }, []);
 
   return (
     <>
       <div className="grid grid-cols-4 gap-6">
-        {store.map((store) => (
-          <div className="" key={store.id}>
-            <div>
-              <img className="w-full" src={store.imagen} alt={store.nombre} />
-              <div className="px-4 py-2">
-                <h3 className="font-bold text-xl">{store.nombre}</h3>
-              </div>
+        {cursos.map((curso) => (
+          <div
+            key={curso.id_curso}
+            className="bg-white shadow-md rounded-lg overflow-hidden"
+          >
+            <img
+              className="w-full h-48 object-cover"
+              src={curso.imagen}
+              alt={curso.nombre}
+            />
+            <div className="px-4 py-2">
+              <h3 className="font-bold text-xl mb-2">{curso.nombre}</h3>
             </div>
           </div>
         ))}

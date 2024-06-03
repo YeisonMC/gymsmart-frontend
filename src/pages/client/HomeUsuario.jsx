@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ImagePerfil from "../../assets/img/home/perfil.jpg";
 import SeccionCard from "./components/home/SeccionCard";
 
@@ -15,11 +15,11 @@ const HomeUsuario = () => {
 
   return (
     <>
-      <section className="mt-2 max-w-screen-2xl mx-auto">
+      <section className="mt-2 ml-[18em] max-w-screen-2xl mx-auto">
         {/* <h1>Bienvenid@, {user.nombre} </h1> */}
         <div className="flex justify-between">
           <div>
-            <h1 className="text-3xl font-bold">Hola, {user?.nombre}</h1>
+            <h1 className="text-4xl font-bold">Hola, {user?.nombre}</h1>
             <p className="text-">Bienvenid@ de vuelta</p>
           </div>
           <div>

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-color-background py-6">
       <div className="max-w-screen-2xl w-11/12 mx-auto">
         <div className="flex gap-[5%] my-4 max-md:flex-col">
-          <div className="w-[40%] max-lg:w-[80%] max-sm:w-[100%]">
+          <div className="w-[45%] max-lg:w-[80%] max-sm:w-[100%]">
             <h1 className="font-semibold text-base text-gray-100">GymSmart</h1>
             <div className="w-[50%] max-sm:w-[100%]">
               <p className="text-gray-400 text-sm">
@@ -23,7 +23,7 @@ const Footer = () => {
               </form>
             </div>
           </div>
-          <div className="w-[55%] max-lg:w-[90%] max-sm:w-[100%] grid grid-cols-3 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-md:mt-10">
+          <div className="w-[50%] max-lg:w-[90%] max-sm:w-[100%] grid grid-cols-3 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-md:mt-10">
             <div className="px-4 max-md:px-0">
               <h1 className="font-semibold text-base text-gray-100 uppercase">
                 Servicios
@@ -106,7 +106,7 @@ const Footer = () => {
                 viewBox="0 0 14 14"
               >
                 <g fill="none">
-                  <g clip-path="url(#primeTwitter0)">
+                  <g clipPath="url(#primeTwitter0)">
                     <path
                       fill="currentColor"
                       d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"
