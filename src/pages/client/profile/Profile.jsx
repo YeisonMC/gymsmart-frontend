@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../../context/AuthContext";
+import { toast, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Profile = () => {
   const { user, updateUser } = useContext(AuthContext);
@@ -53,8 +55,19 @@ const Profile = () => {
       }
 
       const updatedUser = await response.json();
-      alert("Perfil actualizado con éxito");
+      // alert("Perfil actualizado con éxito");
       console.log("Usuario actualizado:", updatedUser);
+      toast.success("Actualización exitosa", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Slide,
+      });
       updateUser(updatedUser);
     } catch (error) {
       alert("Error al actualizar el perfil: " + error.message);
