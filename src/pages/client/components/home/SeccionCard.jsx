@@ -8,7 +8,7 @@ const SeccionCard = () => {
     const fetchCursos = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/gym/smart/api/get/cursos"
+          "http://localhost:3000/gym/smart/cursos/api/get/todos-cursos"
         );
         setCursos(response.data);
       } catch (error) {

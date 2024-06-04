@@ -21,7 +21,7 @@ const Form = () => {
 
     try {
       const result = await axios.post(
-        "http://localhost:3000/gym/smart/api/post/usuarios/login",
+        "http://localhost:3000/gym/smart/usuarios/api/post/usuarios/login",
         data
       );
       console.log(result.data);

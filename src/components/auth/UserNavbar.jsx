@@ -81,7 +81,10 @@ const UserNavbar = () => {
                 </Link>
               </li>
               <li>
-                <Link className="text-[#262628] flex items-center gap-3 px-4 py-3 rounded-lg">
+                <Link
+                  to="/user/profile"
+                  className="text-[#262628] flex items-center gap-3 px-4 py-3 rounded-lg"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -94,7 +97,6 @@ const UserNavbar = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-
                   <p>Perfil</p>
                 </Link>
               </li>
