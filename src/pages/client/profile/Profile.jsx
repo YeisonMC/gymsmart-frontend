@@ -76,7 +76,7 @@ const Profile = () => {
 
   console.log(user?.id_usuario);
   return (
-    <section className="ml-[18em]">
+    <section className="">
       <h1>Perfil</h1>
       <form onSubmit={handleSubmit}>
         <label>

@@ -4,6 +4,7 @@ import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/authentication/LoginPage";
 import NotFound from "../pages/error/NotFound";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const RouterApp = () => {
   return (
@@ -14,6 +15,7 @@ const RouterApp = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer />
     </>
   );
 };

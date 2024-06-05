@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
 import { ToastContainer, Slide } from "react-toastify";
 import RouterApp from "./routes/RouterApp";
 import { AuthProvider } from "./context/AuthContext";
@@ -22,7 +21,6 @@ const App = () => {
             }
           />
         </Routes>
-        <Footer />
       </AuthProvider>
       <ToastContainer
         position="top-right"

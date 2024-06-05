@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import "../../assets/css/Navbar.css";
 
 const LINK_NAVBAR =
   "text-[#262628] flex items-center gap-3 px-4 py-3 rounded-lg";
@@ -7,7 +8,7 @@ const LINK_NAVBAR =
 const LINK_NAVBAR_ACTIVE =
   "bg-[#262628] text-gray-200 flex items-center gap-3 px-4 py-3 rounded-lg";
 
-const UserNavbar = () => {
+const UserNavbar = ({ isNavbarOpen, setIsNavbarOpen }) => {
   const location = useLocation();
 
   const getLinkClass = (path) => {
@@ -17,11 +18,31 @@ const UserNavbar = () => {
   console.log(location);
 
   return (
-    <header className="fixed top-0 left-0 w-[17em] h-screen p-4 shadow-md bg-white">
+    <header
+      className={`fixed top-0 left-0 w-[17em] h-screen p-4 shadow-md bg-white transition-all duration-700 ${
+        isNavbarOpen ? "translate-x-0" : "-translate-x-full"
+      } `}
+    >
       <div className="flex flex-col justify-between h-full">
         <div>
-          <div className="text-center border-b-2 border-[#444447]">
-            <h1 className=" font-bold text-xl uppercase">GymSmart</h1>
+          <div className="border-b-2 border-[#444447]">
+            <a onClick={() => setIsNavbarOpen(false)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="hidden max-md:block size-8 absolute top-0 right-0"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+            <h1 className=" font-bold text-xl uppercase text-center">
+              GymSmart
+            </h1>
             <img
               src="https://images.vexels.com/media/users/3/153334/isolated/preview/cf5ff26985a46460a5a29aa9443cb323-logotipo-de-sitamet-power-gym.png"
               alt=""
@@ -128,6 +149,9 @@ const UserNavbar = () => {
           >
             Cerrar Sesion
           </button> */}
+          <button className="bg-[#262628] text-white py-2 px-2 rounded-md">
+            Cerrar Sesion
+          </button>
         </div>
       </div>
     </header>
