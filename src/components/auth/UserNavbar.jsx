@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "../../assets/css/Navbar.css";
+import { AuthContext } from "../../context/AuthContext";
 
 const LINK_NAVBAR =
   "text-[#262628] flex items-center gap-3 px-4 py-3 rounded-lg";
@@ -10,6 +11,13 @@ const LINK_NAVBAR_ACTIVE =
 
 const UserNavbar = ({ isNavbarOpen, setIsNavbarOpen }) => {
   const location = useLocation();
+  const { logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login", { replace: true });
+  };
 
   const getLinkClass = (path) => {
     return location.pathname === path ? LINK_NAVBAR_ACTIVE : LINK_NAVBAR;
@@ -143,15 +151,15 @@ const UserNavbar = ({ isNavbarOpen, setIsNavbarOpen }) => {
           </div>
         </div>
         <div className="text-center">
-          {/* <button
+          <button
             className="bg-[#262628] text-white py-2 px-2 rounded-md"
             onClick={handleLogout}
           >
             Cerrar Sesion
-          </button> */}
-          <button className="bg-[#262628] text-white py-2 px-2 rounded-md">
-            Cerrar Sesion
           </button>
+          {/* <button className="bg-[#262628] text-white py-2 px-2 rounded-md">
+            Cerrar Sesion
+          </button> */}
         </div>
       </div>
     </header>

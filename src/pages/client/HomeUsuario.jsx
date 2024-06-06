@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ImagePerfil from "../../assets/img/home/perfil.jpg";
 import SeccionCard from "./components/home/SeccionCard";
 import Imagen from "../../assets/svg/ejercicio2.svg";
-import News from "./components/News";
+import News from "./components/home/News";
+import "../../assets/css/Navbar.css";
+import Options from "./components/home/Options";
 
 const HomeUsuario = () => {
   const { user, logout } = useContext(AuthContext);
@@ -17,8 +19,7 @@ const HomeUsuario = () => {
 
   return (
     <>
-      <section className="mt-4 px-8 mx-auto">
-        {/* <h1>Bienvenid@, {user.nombre} </h1> */}
+      <section className="mt-8 px-8 mx-auto">
         <div className="flex justify-between">
           <div>
             <h1 className="text-4xl font-bold">Hola, {user?.nombre}</h1>
@@ -34,7 +35,7 @@ const HomeUsuario = () => {
         </div>
         <div className="flex gap-[3%] my-6">
           <div className="w-[67%]">
-            <div className="bg-[#f2f3f8] h-[300px] w-full grid grid-cols-2 rounded-2xl shadow-md">
+            <div className="bg-[#f2f3f8] h-[330px] w-full grid grid-cols-2 rounded-2xl shadow-lg">
               <div className="px-4 my-auto">
                 <h1 className="text-3xl  font-bold leading-7">
                   Transforma tu vida, entrena con nosotros
@@ -61,7 +62,6 @@ const HomeUsuario = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-
                   <p>Calendario</p>
                 </a>
               </div>
@@ -71,21 +71,20 @@ const HomeUsuario = () => {
                 alt=""
               />
             </div>
+            <Options />
           </div>
-          <div className="w-[30%] bg-[#f2f3f8] rounded-2xl shadow-md">
+          <div className="w-[30%] bg-[#f2f3f8] rounded-2xl shadow-lg">
             <News />
           </div>
         </div>
         <SeccionCard />
-        <div className="h-screen"></div>
-        {/* <h1>{user?.nombre}</h1> */}
-        {/* <h1>{user?.apellido}</h1> */}
-        <button
+
+        {/* <button
           className="bg-color-rojo text-white py-2 px-2 rounded-md"
           onClick={handleLogout}
         >
           Cerrar Sesion
-        </button>
+        </button> */}
       </section>
     </>
   );
