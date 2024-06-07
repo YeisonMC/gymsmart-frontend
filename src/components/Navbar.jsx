@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <header className="absolute z-10 flex gap-5 bg-black w-full py-3">
+    <header className="absolute z-20 flex gap-5 bg-black w-full py-3">
       <Link to="/" className="text-white">
         Header
       </Link>

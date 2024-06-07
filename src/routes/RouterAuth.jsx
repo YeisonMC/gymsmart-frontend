@@ -35,10 +35,28 @@ const RouterAuth = () => {
         setIsNavbarOpen={setIsNavbarOpen}
       />
       <section className="ml-[17em] max-md:ml-0">
-        <div className="hidden max-md:block">
-          <button onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
+        <div className="hidden max-md:mt-4 max-md:block max-w-screen-2xl w-11/12 mx-auto">
+          {/* <button onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
             {isNavbarOpen ? "Cerrar" : "Abrir"}
-          </button>
+          </button> */}
+          <p className="hidden absolute z-40">Abrir</p>
+          <a
+            className="cursor-pointer"
+            onClick={() => setIsNavbarOpen(!isNavbarOpen)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="size-9 "
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </a>
         </div>
         <Routes>
           <Route path="/" element={<HomeUsuario />} />

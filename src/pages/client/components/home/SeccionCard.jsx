@@ -35,7 +35,7 @@ const SeccionCard = () => {
   return (
     <>
       <h1 className="font-bold text-3xl text-[#262628]">Nuestros Clases</h1>
-      <div className="mt-4 grid grid-cols-4 gap-6">
+      <div className="mt-4 mb-7 grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-6">
         {cursos.map((curso) => (
           <div
             key={curso.id_curso}

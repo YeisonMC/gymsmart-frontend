@@ -79,29 +79,36 @@ const Profile = () => {
 
   console.log(user?.id_usuario);
   return (
-    <section className="p-8 h-screen">
+    <section className="mt-8 max-w-screen-2xl w-11/12 mx-auto h-screen">
       <h1 className="font-bold text-3xl text-[#262628]">Perfil</h1>
       <div className="flex gap-10 my-2">
         {/* <p>Cambia tu foto de perfil y edita tu informacion. </p> */}
-        <div className="bg-red-200">
-          <h1 className="my-2 text-center">
+        <div className="shadow-[rgba(0,_0,_0,_0.18)_0px_3px_6px] py-4 rounded-md">
+          <h1 className="mb-2 text-center text-2xl font-medium">
             {user?.nombre} {user?.apellido}
           </h1>
-          <img src={ImagePerfil} alt="" className="rounded-full" />
-          <div className=" ">
+          <img src={ImagePerfil} alt="" className="rounded-full mx-auto" />
+          <div className="text-center w-[60%] mt-4 mx-auto bg-[#F1F4FD] rounded-md border-2 border-[#E0E3ED] py-3">
             {/* <inp type="file">Cambiar Foto</inp> */}
-            <a href="">Cambiar Foto</a>
+            {/* <a href="">Cambiar Foto</a> */}
             {/* <input type="file" /> */}
             <span>JPG o PNG</span>
             <p>
-              Sube un nuevo avatar. La imagen se redimensionará automáticamente
+              Sube un nuevo avatar. La imagen se redimensionará automáticamente.
             </p>
-            <p>El tamaño máximo es de 1Mb</p>
+            <p className="mt-1">
+              El tamaño máximo es de <b>2Mb</b>
+            </p>
           </div>
         </div>
-        <form onSubmit={handleSubmit} className="w-[600px] bg-slate-100">
+        <form
+          onSubmit={handleSubmit}
+          className="w-[650px] shadow-[rgba(0,_0,_0,_0.18)_0px_3px_6px] p-4  rounded-md"
+        >
           <h1 className="font-bold text-3xl text-[#262628]">Editar Perfil</h1>
-          <p>Cambia tu foto de perfil y edita tu informacion.</p>
+          <p className="mb-2">
+            Cambia tu foto de perfil y edita tu informacion.
+          </p>
           <div className="flex gap-x-10 mb-2">
             <div className="w-full">
               <LabelForm>Nombre</LabelForm>
@@ -152,6 +159,7 @@ const Profile = () => {
               onChange={handleChange}
             /> */}
             </div>
+
             <div className="w-full">
               <LabelForm>Contraseña</LabelForm>
               <InputForm
@@ -160,6 +168,7 @@ const Profile = () => {
                 value={formData.contrasena}
                 onChange={handleChange}
                 readOnly
+                disabled
               ></InputForm>
               {/* <input
               type="password"

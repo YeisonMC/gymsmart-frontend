@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "../../../../assets/css/Navbar.css";
 
 const News = () => {
   const [courseSchedules, setCourseSchedules] = useState([]);
@@ -35,7 +36,7 @@ const News = () => {
                 {courseSchedules.dia.slice(0, 4)}..
               </h1>
               <div className="">
-                <h3 className="font-bold text-xl text-white">
+                <h3 className="font-bold text-xl text-white ">
                   Proxima clase de {courseSchedules.nombre_curso}
                 </h3>
                 <div className="flex gap-2 mt-1">
