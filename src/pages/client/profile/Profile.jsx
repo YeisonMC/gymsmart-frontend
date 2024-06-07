@@ -1,7 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../../context/AuthContext";
+import ImagePerfil from "../../../assets/img/home/perfil.jpg";
 import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LabelForm from "../components/profile/LabelForm";
+import InputForm from "../components/profile/InputForm";
 
 const Profile = () => {
   const { user, updateUser } = useContext(AuthContext);
@@ -76,71 +79,149 @@ const Profile = () => {
 
   console.log(user?.id_usuario);
   return (
-    <section className="">
-      <h1>Perfil</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nombre:
-          <input
+    <section className="p-8 h-screen">
+      <h1 className="font-bold text-3xl text-[#262628]">Perfil</h1>
+      <div className="flex gap-10 my-2">
+        {/* <p>Cambia tu foto de perfil y edita tu informacion. </p> */}
+        <div className="bg-red-200">
+          <h1 className="my-2 text-center">
+            {user?.nombre} {user?.apellido}
+          </h1>
+          <img src={ImagePerfil} alt="" className="rounded-full" />
+          <div className=" ">
+            {/* <inp type="file">Cambiar Foto</inp> */}
+            <a href="">Cambiar Foto</a>
+            {/* <input type="file" /> */}
+            <span>JPG o PNG</span>
+            <p>
+              Sube un nuevo avatar. La imagen se redimensionará automáticamente
+            </p>
+            <p>El tamaño máximo es de 1Mb</p>
+          </div>
+        </div>
+        <form onSubmit={handleSubmit} className="w-[600px] bg-slate-100">
+          <h1 className="font-bold text-3xl text-[#262628]">Editar Perfil</h1>
+          <p>Cambia tu foto de perfil y edita tu informacion.</p>
+          <div className="flex gap-x-10 mb-2">
+            <div className="w-full">
+              <LabelForm>Nombre</LabelForm>
+              {/* <input
             type="text"
             name="nombre"
             value={formData.nombre}
             onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Apellido:
-          <input
-            type="text"
-            name="apellido"
-            value={formData.apellido}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Contraseña:
-          <input
-            type="password"
-            name="contrasena"
-            value={formData.contrasena}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Fecha de Nacimiento:
-          <input
-            type="text"
-            name="fecha_nacimiento"
-            value={formData.fecha_nacimiento}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Género:
-          <input
-            type="text"
-            name="genero"
-            value={formData.genero}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Actualizar Perfil</button>
-      </form>
+          /> */}
+              <InputForm
+                type="text"
+                name="nombre"
+                value={formData.nombre}
+                onChange={handleChange}
+                maxLength={15}
+              ></InputForm>
+            </div>
+            <div className="w-full">
+              <LabelForm>Apellidos</LabelForm>
+              <InputForm
+                type="text"
+                name="apellido"
+                value={formData.apellido}
+                onChange={handleChange}
+              ></InputForm>
+
+              {/* <input
+                  type="text"
+                  name="apellido"
+                  value={formData.apellido}
+                  onChange={handleChange}
+                /> */}
+            </div>
+          </div>
+          <div className="flex gap-x-10 my-4">
+            <div className="w-full">
+              <LabelForm>Correo</LabelForm>
+              <InputForm
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              ></InputForm>
+              {/* <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            /> */}
+            </div>
+            <div className="w-full">
+              <LabelForm>Contraseña</LabelForm>
+              <InputForm
+                type="password"
+                name="contrasena"
+                value={formData.contrasena}
+                onChange={handleChange}
+                readOnly
+              ></InputForm>
+              {/* <input
+              type="password"
+              name="contrasena"
+              value={formData.contrasena}
+              onChange={handleChange}
+            /> */}
+            </div>
+          </div>
+
+          <div className="flex gap-x-10 mb-2">
+            <div className="w-full">
+              <LabelForm>Fecha de Nacimiento</LabelForm>
+              <InputForm
+                type="date"
+                name="fecha_nacimiento"
+                value={formData.fecha_nacimiento}
+                onChange={handleChange}
+              ></InputForm>
+              {/* <input
+              type="text"
+              name="fecha_nacimiento"
+              value={formData.fecha_nacimiento}
+              onChange={handleChange}
+            /> */}
+            </div>
+            <div className="w-full">
+              <LabelForm>Género</LabelForm>
+              <select
+                name="genero"
+                value={formData.genero}
+                onChange={handleChange}
+                className="w-full border-[1.9px] border-[#d9d9da] h-12 px-2 rounded-lg focus:border-[#AEAFB2] focus:outline-none focus:ring-[#AEAFB2] font-normal transition duration-500"
+              >
+                <option disabled value="">
+                  Selecciona un género
+                </option>
+                <option value="M">Masculino</option>
+                <option value="F">Femenino</option>
+              </select>
+              {/* <InputForm
+                type="text"
+                name="genero"
+                value={formData.genero}
+                onChange={handleChange}
+              ></InputForm> */}
+              {/* <input
+              type="text"
+              name="genero"
+              value={formData.genero}
+              onChange={handleChange}
+            /> */}
+            </div>
+          </div>
+          <button
+            type="submit"
+            className="bg-[#262628] text-white mt-2 px-4 py-3 rounded-lg"
+          >
+            Actualizar Perfil
+          </button>
+        </form>
+      </div>
     </section>
   );
 };
