@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchCursos } from "../../../../apis/curses/CursesApi";
+import { Link } from "react-router-dom";
 
 const SeccionCard = () => {
   const [cursos, setCursos] = useState([]);
@@ -34,10 +35,11 @@ const SeccionCard = () => {
 
   return (
     <>
-      <h1 className="font-bold text-3xl text-[#262628]">Nuestros Clases</h1>
+      <h1 className="font-bold text-3xl text-[#262628]">Nuestros cursos</h1>
       <div className="mt-4 mb-7 grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-6">
         {cursos.map((curso) => (
-          <div
+          <Link
+            to={`/user/curses/${curso.id_curso}`}
             key={curso.id_curso}
             className="bg-white shadow-md rounded-lg overflow-hidden"
           >
@@ -49,7 +51,7 @@ const SeccionCard = () => {
             <div className="px-4 py-2">
               <h3 className="font-bold text-xl mb-2">{curso.nombre}</h3>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>

@@ -79,9 +79,10 @@ const Profile = () => {
 
   console.log(user?.id_usuario);
   return (
-    <section className="mt-8 max-w-screen-2xl w-11/12 mx-auto h-screen">
+    // 2xl:bg-violet-100 xl:bg-red-100 lg:bg-blue-100 md:bg-green-100 sm:bg-yellow-200
+    <section className="mt-8 max-w-screen-2xl w-11/12 mx-auto h-screen max-xl:h-auto">
       <h1 className="font-bold text-3xl text-[#262628]">Perfil</h1>
-      <div className="flex gap-10 my-2">
+      <div className="flex max-xl:flex-col max-xl:gap-4 gap-10 my-2">
         {/* <p>Cambia tu foto de perfil y edita tu informacion. </p> */}
         <div className="shadow-[rgba(0,_0,_0,_0.18)_0px_3px_6px] py-4 rounded-md">
           <h1 className="mb-2 text-center text-2xl font-medium">
@@ -103,7 +104,7 @@ const Profile = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="w-[650px] shadow-[rgba(0,_0,_0,_0.18)_0px_3px_6px] p-4  rounded-md"
+          className="w-[650px] max-xl:w-full max-xl:mb-4 shadow-[rgba(0,_0,_0,_0.18)_0px_3px_6px] p-4 rounded-md"
         >
           <h1 className="font-bold text-3xl text-[#262628]">Editar Perfil</h1>
           <p className="mb-2">

@@ -6,6 +6,7 @@ import NotFound from "../pages/error/NotFound";
 import MyCurses from "../pages/client/curses/MyCurses";
 import Profile from "../pages/client/profile/Profile";
 import UserFooter from "../components/auth/UserFooter";
+import IdCurses from "../pages/client/curses/IdCurses";
 
 const RouterAuth = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -21,7 +22,7 @@ const RouterAuth = () => {
     }
 
     window.addEventListener("resize", handleWindowResize);
-    handleWindowResize(); // Llamada inicial
+    handleWindowResize();
 
     return () => {
       window.removeEventListener("resize", handleWindowResize);
@@ -36,9 +37,6 @@ const RouterAuth = () => {
       />
       <section className="ml-[17em] max-md:ml-0">
         <div className="hidden max-md:mt-4 max-md:block max-w-screen-2xl w-11/12 mx-auto">
-          {/* <button onClick={() => setIsNavbarOpen(!isNavbarOpen)}>
-            {isNavbarOpen ? "Cerrar" : "Abrir"}
-          </button> */}
           <p className="hidden absolute z-40">Abrir</p>
           <a
             className="cursor-pointer"
@@ -61,6 +59,7 @@ const RouterAuth = () => {
         <Routes>
           <Route path="/" element={<HomeUsuario />} />
           <Route path="/mycurses" element={<MyCurses />} />
+          <Route path="/curses/:id" element={<IdCurses />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
