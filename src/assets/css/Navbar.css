@@ -1,0 +1,45 @@
+/* .slide-in-out {
+  transition: transform 0.8s ease;
+}
+
+
+
+.noticia-container {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+}
+
+.noticia-container > * {
+  flex-grow: 1;
+} */
+
+/* .prueba {
+  background-color: rgba(255, 255, 255, 59);
+  backdrop-filter: blur(90px);
+} */
+
+.text-dispers-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  /* height: 100%; */
+  height: 400px;
+  overflow: hidden;
+}
+
+.recortado {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 400px;
+  background-color: #6b070a;
+  clip-path: polygon(0 0, 40% 0, 100% 100%, 0 100%);
+}
