@@ -1,80 +1,10 @@
 import React from "react";
 
-const Footer = () => {
+const UserFooter = () => {
   return (
     <footer className="bg-color-background py-6">
       <div className="max-w-screen-2xl w-11/12 mx-auto">
-        <div className="flex gap-[5%] my-4 max-md:flex-col">
-          <div className="w-[45%] max-lg:w-[80%] max-sm:w-[100%]">
-            <h1 className="font-semibold text-base text-gray-100">GymSmart</h1>
-            <div className="w-[50%] max-sm:w-[100%]">
-              <p className="text-gray-400 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit Eveniet
-                eius libero culpa.
-              </p>
-              <form action="" className="mt-6 flex gap-4 items-center">
-                <a href="">Tu correo</a>
-                <a
-                  href=""
-                  className="bg-[#2f3f4a] py-2 px-4 rounded-lg text-gray-100"
-                >
-                  Enviar
-                </a>
-              </form>
-            </div>
-          </div>
-          <div className="w-[50%] max-lg:w-[90%] max-sm:w-[100%] grid grid-cols-3 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8 max-md:mt-10">
-            <div className="px-4 max-md:px-0">
-              <h1 className="font-semibold text-base text-gray-100 uppercase">
-                Servicios
-              </h1>
-              <div className="flex flex-col gap-1 mt-4 text-gray-400 text-sm">
-                <a href="">Flex Muscle</a>
-                <a href="">Cardio Exercise</a>
-                <a href="">Basic Yoga</a>
-                <a href="">Weigth Lading</a>
-              </div>
-            </div>
-            <div className="px-4">
-              <h1 className="font-semibold text-base text-gray-100 uppercase">
-                Precios
-              </h1>
-              <div className="flex flex-col gap-1 mt-4 text-gray-400 text-sm">
-                <a href="">Mensual</a>
-                <a href="">Trimestral</a>
-                <a href="">Semestral</a>
-                <a href="">Anual</a>
-              </div>
-            </div>
-            <div className="px-4">
-              <h1 className="font-semibold text-base text-gray-100 uppercase">
-                Campañas
-              </h1>
-              <ul className="mt-4 text-gray-400 text-sm space-y-1">
-                <li className="">
-                  <a href="">About Us</a>
-                </li>
-                <li className="">
-                  <a href="">Carrers</a>
-                </li>
-                <li className="">
-                  <a href="">Costumer</a>
-                </li>
-                <li className="">
-                  <a href="">Parthers</a>
-                </li>
-              </ul>
-              {/* <div className="flex flex-col gap-1 mt-4 text-gray-400 text-sm">
-                <a href="">About Us</a>
-                <a href="">Carrers</a>
-                <a href="">Costumer</a>
-                <a href="">Parthers</a>
-              </div> */}
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 flex justify-between items-center text-gray-300 max-md:flex-col-reverse max-md:items-start">
+        <div className="flex justify-between items-center text-gray-300 max-md:flex-col-reverse max-md:items-start">
           <div className="text-sm max-md:mt-2">
             &copy; Copyrigth GymSmart 2024. Todos los derechos reservados
           </div>
@@ -143,4 +73,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default UserFooter;

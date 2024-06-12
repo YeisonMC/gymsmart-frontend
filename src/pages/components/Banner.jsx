@@ -3,7 +3,7 @@ import BannerImage from "../../assets/img/home/banner.jpg";
 import { Link } from "react-router-dom";
 const Banner = () => {
   return (
-    <div className="relative bg-gradient-to-r h-screen text-white overflow-hidden">
+    <section className="relative bg-gradient-to-r h-screen text-white overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={BannerImage}
@@ -47,7 +47,7 @@ const Banner = () => {
         </div>
         <div className="mx-auto"> pasdasdasdasassadd</div>
       </div>
-    </div>
+    </section>
   );
 };
 

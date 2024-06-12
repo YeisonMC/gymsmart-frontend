@@ -1,14 +1,19 @@
 import React from "react";
 import Banner from "./components/Banner";
 import Programs from "./components/Programs";
+import About from "./components/About";
+import Suscripcions from "./components/Suscripcions";
 
 const HomePage = () => {
   return (
     <>
-      <section className="bg-color-background">
+      {/* bg-color-background */}
+      <section className="bg-[#0e0e0e]">
         <Banner />
         <nav className="max-w-screen-xl w-11/12 mx-auto">
           <Programs />
+          <About />
+          <Suscripcions />
         </nav>
       </section>
     </>
