@@ -12,6 +12,7 @@ const Navbar = () => {
       </Link>
     </header>
   );
+  // return <div className="absolute z-10 text-white">Navbar</div>;
 };
 
 export default Navbar;
