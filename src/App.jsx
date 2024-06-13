@@ -9,6 +9,7 @@ import RouterAuth from "./routes/RouterAuth";
 const App = () => {
   return (
     <>
+      {/* CAMBIOS EN BASE A LA RAMA DEVELOP */}
       <AuthProvider>
         <Routes>
           <Route path="/*" element={<RouterApp />} />
