@@ -7,6 +7,7 @@ import MyCurses from "../pages/client/curses/MyCurses";
 import Profile from "../pages/client/profile/Profile";
 import UserFooter from "../components/auth/UserFooter";
 import IdCurses from "../pages/client/curses/IdCurses";
+import Subscriptions from "../pages/client/subscriptions/Subscriptions";
 
 const RouterAuth = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -59,6 +60,7 @@ const RouterAuth = () => {
         <Routes>
           <Route path="/" element={<HomeUsuario />} />
           <Route path="/mycurses" element={<MyCurses />} />
+          <Route path="/subscriptions" element={<Subscriptions />} />
           <Route path="/curses/:id" element={<IdCurses />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />

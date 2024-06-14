@@ -13,12 +13,12 @@ const Banner = () => {
         <div className="absolute inset-0 bg-black opacity-70 "></div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-2 items-center h-screen max-w-screen-2xl w-11/12 mx-auto">
+      <div className="relative z-10 grid grid-cols-2 max-xl:grid-cols-1 items-center h-screen max-w-screen-2xl w-11/12 mx-auto">
         <div>
-          <h1 className="text-5xl font-bold leading-tight mb-4 uppercase">
+          <h1 className="text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-tight mb-4 uppercase">
             Bienvenido a
           </h1>
-          <h1 className="text-6xl font-bold leading-tight mb-4 uppercase">
+          <h1 className="text-6xl max-lg:text-5xl max-md:text-4xl  font-bold leading-tight mb-4 uppercase">
             GYM Smart
           </h1>
           <p className="text-lg text-gray-300 mb-8">
@@ -45,7 +45,7 @@ const Banner = () => {
             </svg>
           </Link>
         </div>
-        <div className="mx-auto"> pasdasdasdasd</div>
+        <div className="mx-auto max-lg:hidden"> pasdasdasdasd</div>
       </div>
     </section>
   );
