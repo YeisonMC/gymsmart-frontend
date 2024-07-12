@@ -1,6 +1,8 @@
 import React from "react";
 import BannerImage from "../../assets/img/home/banner.jpg";
 import { Link } from "react-router-dom";
+import GymSmart1 from "../../assets/img/landing/GymSmart1.png";
+
 const Banner = () => {
   return (
     <section className="relative bg-gradient-to-r h-screen text-white overflow-hidden">
@@ -13,7 +15,7 @@ const Banner = () => {
         <div className="absolute inset-0 bg-black opacity-70 "></div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-2 max-xl:grid-cols-1 items-center h-screen max-w-screen-2xl w-11/12 mx-auto">
+      <div className="relative z-10 grid grid-cols-2 max-xl:grid-cols-1 items-center h-screen max-w-screen-xl w-11/12 mx-auto">
         <div>
           <h1 className="text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-tight mb-4 uppercase">
             Bienvenido a
@@ -45,7 +47,9 @@ const Banner = () => {
             </svg>
           </Link>
         </div>
-        <div className="mx-auto max-lg:hidden"> pasdasdasdasd</div>
+        <div className="mx-auto max-lg:hidden ">
+          <img src={GymSmart1} alt="GymSmart1" className="bg-shadow" />
+        </div>
       </div>
     </section>
   );

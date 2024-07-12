@@ -2,20 +2,19 @@ import React from "react";
 import Mancuernas from "../../assets/img/home/mancuernas.png";
 import Cardio from "../../assets/img/home/cardio.png";
 import Meditacion from "../../assets/img/home/meditacion.png";
-import Peso from "../../assets/img/home/peso.png";
 import LevantamientoDePesas from "../../assets/img/home/levantamiento-de-pesas.png";
 
 const Programs = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-14 mb-32">
       <div className="text-center ">
         <h1 className="text-white">Nuestros programas</h1>
         <h1 className="my-2 uppercase text-white font-bold text-4xl">
           Construye tu mejor cuerpo
         </h1>
       </div>
-      <div className="mt-14 grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
-        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between">
+      <div className="mt-20 grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between select-none">
           <div>
             <img
               src={Mancuernas}
@@ -42,7 +41,7 @@ const Programs = () => {
             />
           </svg>
         </div>
-        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between">
+        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between select-none">
           <div>
             <img
               src={Cardio}
@@ -69,7 +68,7 @@ const Programs = () => {
             />
           </svg>
         </div>
-        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between">
+        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between select-none">
           <div>
             <img
               src={Meditacion}
@@ -96,7 +95,7 @@ const Programs = () => {
             />
           </svg>
         </div>
-        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between">
+        <div className="py-4 px-8 hover:bg-[#83161A] rounded-md mx-auto transition-all duration-500 group flex flex-col justify-between select-none">
           <div>
             <img
               src={LevantamientoDePesas}

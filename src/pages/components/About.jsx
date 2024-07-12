@@ -1,16 +1,16 @@
 import React from "react";
 import CountUpNumber from "../../components/CountUpNumber";
 import "../../assets/css/Navbar.css";
+import GymSmart2 from "../../assets/img/landing/GymSmart2.png";
 
 const About = () => {
   return (
-    <nav className="mt-8">
-      <div className="grid grid-cols-2 max-lg:grid-cols-1 max-md:flex max-md:flex-col-reverse gap-y-6">
-        <div className="">
+    <nav className="py-32">
+      <div className="grid grid-cols-2 max-lg:grid-cols-1 max-md:flex max-md:flex-col-reverse gap-6">
+        <div>
           <div className="container">
-            <div className="recortado">
-              <h1>asda</h1>
-            </div>
+            <img src={GymSmart2} alt="" className="absolute  z-10 px-8" />
+            <div className="recortado"></div>
           </div>
         </div>
         <div className="text-white">
