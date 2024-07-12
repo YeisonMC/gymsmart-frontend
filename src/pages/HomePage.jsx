@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Programs from "./components/Programs";
 import About from "./components/About";
 import Suscripcions from "./components/Suscripcions";
+import Contact from "./components/Contact";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
           <Programs />
           <About />
           <Suscripcions />
+          <Contact />
         </nav>
       </section>
     </>

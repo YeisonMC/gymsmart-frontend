@@ -13,12 +13,8 @@ const LoginPage = () => {
         />
         <div className="absolute inset-0 bg-[rgba(0,0,0,.7)] backdrop-blur-sm"></div>
       </div>
-
-      <div className="relative z-10 grid grid-cols-2 items-center h-screen max-w-screen-2xl w-11/12 mx-auto">
-        <div className=""> pasdasdasdasd</div>
-        <div>
-          <Form />
-        </div>
+      <div className="flex items-center justify-center h-screen">
+        <Form />
       </div>
     </section>
   );

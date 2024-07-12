@@ -91,7 +91,10 @@ const UserNavbar = ({ isNavbarOpen, setIsNavbarOpen }) => {
                 </Link>
               </li>
               <li>
-                <Link className="text-[#262628] flex items-center gap-3 px-4 py-3 rounded-lg">
+                <Link
+                  to="/user/subscriptions"
+                  className="text-[#262628] flex items-center gap-3 px-4 py-3 rounded-lg"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
