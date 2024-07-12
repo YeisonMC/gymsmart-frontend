@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import imagen1 from "../assets/images/imggym2.png";
+import imagen2 from "../assets/images/gym4.png";
 
 const Navbar = () => {
   let Links = [
-    { name: "HOME", link: "/" },
-    { name: "SERVICE", link: "/" },
-    { name: "CONTACT", link: "/" },
-    { name: "REGISTRARSE", link: "/" },
-    { name: "LOGEARSE", link: "/" },
+    { name: "ACERCA DE", link: "/" },
+    { name: "SERVICIOS", link: "/" },
+    { name: "PRECIOS", link: "/" },
+    { name: "LOGIN", link: "/" },
+    { name: "REGISTRARME", link: "/" },
   ];
   return (
-    <div className="absolute z-10 text-white ">
+    <div className="absolute z-20 text-white ">
       <div className="shadow-md w-full fixed top-0 left-0">
         <div className="md:flex items-center justify-between bg-transparent py-4 md:px-10 px-7">
           <div
@@ -22,11 +24,11 @@ const Navbar = () => {
             </span>
             GYM SMART
           </div>
-          <ul className="md:flex md:items-center">
+          <ul className="md:flex max-md:hidden md:items-center">
             {Links.map((link) => (
               <li key={link.name} className="md:ml-8 text-xl">
                 <a
-                  href={link.Link}
+                  href={link.link}
                   className="text-white-800 hover:text-gray-400 duration-500"
                 >
                   {link.name}

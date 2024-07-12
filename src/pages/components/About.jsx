@@ -1,6 +1,7 @@
 import React from "react";
 import CountUpNumber from "../../components/CountUpNumber";
 import "../../assets/css/Navbar.css";
+import imagen2 from "../../assets/images/gym4.png";
 
 const About = () => {
   return (
@@ -8,9 +9,8 @@ const About = () => {
       <div className="grid grid-cols-2 ">
         <div className="">
           <div class="container">
-            <div class="recortado">
-              <h1>asda</h1>
-            </div>
+            <img className="gym2 relative z-20 px-6" src={imagen2} alt="" />
+            <div class="recortado"></div>
           </div>
         </div>
         <div className="text-white">

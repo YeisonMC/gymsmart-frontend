@@ -1,6 +1,7 @@
 import React from "react";
 import BannerImage from "../../assets/img/home/banner.jpg";
 import { Link } from "react-router-dom";
+import imagen1 from "../../assets/images/imggym2.png";
 const Banner = () => {
   return (
     <section className="relative bg-gradient-to-r h-screen text-white overflow-hidden">
@@ -45,7 +46,9 @@ const Banner = () => {
             </svg>
           </Link>
         </div>
-        <div className="mx-auto"> yeison cabro</div>
+        <div className=" ">
+          <img className="gym1" src={imagen1} alt="" />
+        </div>
       </div>
     </section>
   );

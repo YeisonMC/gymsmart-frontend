@@ -43,3 +43,10 @@
   background-color: #6b070a;
   clip-path: polygon(0 0, 40% 0, 100% 100%, 0 100%);
 }
+
+.gym1 {
+  mask-image: linear-gradient(black 80%, transparent);
+}
+
+.gym2 {
+}
