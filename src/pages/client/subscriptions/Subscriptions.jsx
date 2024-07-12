@@ -91,11 +91,11 @@ const Subscriptions = () => {
   return (
     <div className="my-8 max-md:mt-2 max-w-screen-2xl w-11/12 mx-auto">
       <h1 className="font-bold text-3xl text-[#262628]">Nuestros planes</h1>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 max-xl:grid-cols-2 max-md:grid-cols-1 gap-6">
         {plans.map((plan) => (
-          <div key={plan.id} className="bg-violet-100 p-4">
+          <div key={plan.id} className="mt-1 p-4 shadow-xl rounded-lg">
             <h2 className="font-bold text-2xl">{plan.name}</h2>
-            <p>Precio: ${(plan.price / 100).toFixed(2)}</p>
+            <p>Precio: S/.{(plan.price / 100).toFixed(2)}</p>
             <Elements stripe={stripePromise}>
               <CheckoutForm
                 planId={plan.id}

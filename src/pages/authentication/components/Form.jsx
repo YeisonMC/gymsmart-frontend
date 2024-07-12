@@ -4,12 +4,14 @@ import { useNavigate } from "react-router-dom";
 import { toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../../../context/AuthContext";
+import RegisterForm from "./RegisterForm";
 
 const Form = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [contrasena, setContrasena] = useState("");
   const { login } = useContext(AuthContext);
+  const [isRegistering, setIsRegistering] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -58,25 +60,39 @@ const Form = () => {
     }
   };
 
+  const toggleForm = () => {
+    setIsRegistering(!isRegistering);
+    setEmail("");
+    setContrasena("");
+  };
+
+  if (isRegistering) {
+    return <RegisterForm onBackToLogin={toggleForm} />;
+  }
+
   return (
     <>
       <form
         className="w-full max-w-screen-sm px-4 py-10 bg-white backdrop-blur-lg  md:mx-0 rounded-xl sm:p-10"
         onSubmit={handleLogin}
       >
+        <h1 className="text-center text-2xl text-black font-bold">
+          Iniciar sesión
+        </h1>
         <div className="px-8 mx-auto">
           <div className="mt-5">
             <label className="font-semibold text-sm text-gray-600 pb-1 block">
-              E-mail
+              Correo
             </label>
             <input
               className="text-black border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
+              placeholder="example@gmail.com"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <label className="font-semibold text-sm text-gray-600 pb-1 block">
-              contrasena
+              Contraseña
             </label>
             <input
               className="text-black border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
@@ -90,7 +106,7 @@ const Form = () => {
               className="text-xs font-display font-semibold text-gray-500 hover:text-gray-600 cursor-pointer"
               href="#"
             >
-              Forgot Password?
+              Olvidaste tu contraseña ?
             </a>
           </div>
 
@@ -99,7 +115,7 @@ const Form = () => {
               className="py-2 px-4 bg-color-rojo   text-white w-full transition ease-in duration-300 text-center font-semibold shadow-md rounded-lg"
               type="submit"
             >
-              Iniciar sesión
+              Ingresar
             </button>
           </div>
 
@@ -107,9 +123,9 @@ const Form = () => {
             <span className="w-1/5 border-b md:w-1/4"></span>
             <a
               className="text-xs text-gray-500 uppercase  hover:underline"
-              href="#"
+              onClick={toggleForm}
             >
-              or sign up
+              Registrate
             </a>
             <span className="w-1/5 border-b md:w-1/4"></span>
           </div>
