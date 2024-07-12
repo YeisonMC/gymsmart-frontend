@@ -7,8 +7,8 @@ const About = () => {
     <nav className="mt-8">
       <div className="grid grid-cols-2 max-lg:grid-cols-1 max-md:flex max-md:flex-col-reverse gap-y-6">
         <div className="">
-          <div class="container">
-            <div class="recortado">
+          <div className="container">
+            <div className="recortado">
               <h1>asda</h1>
             </div>
           </div>
