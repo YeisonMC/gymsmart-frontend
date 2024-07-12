@@ -6,7 +6,8 @@
     },
     { "src": "/login", "dest": "/" },
     { "src": "/user", "dest": "/" },
-    { "src": "/user/(.*)", "dest": "/" },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/user/mycurses", "dest": "/" },
+    { "src": "/user/subscriptions", "dest": "/" },
+    { "src": "/user/profile", "dest": "/" }
   ]
 }
