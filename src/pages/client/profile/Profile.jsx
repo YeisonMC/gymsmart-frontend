@@ -43,7 +43,8 @@ const Profile = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3000/gym/smart/usuarios/api/put/editar-usuarios/${user.id_usuario}`,
+        `https://gymsmart-backend.onrender.com/gym/smart/usuarios/api/put/editar-usuarios/${user.id_usuario}`,
+        // `http://localhost:3000/gym/smart/usuarios/api/put/editar-usuarios/${user.id_usuario}`,
         {
           method: "PUT",
           headers: {

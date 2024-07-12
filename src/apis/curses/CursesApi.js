@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000/gym/smart/cursos/api";
+const API_BASE_URL =
+  "https://gymsmart-backend.onrender.com/gym/smart/cursos/api";
+// const API_BASE_URL = "http://localhost:3000/gym/smart/cursos/api";
 
 export const fetchCursos = async () => {
   try {

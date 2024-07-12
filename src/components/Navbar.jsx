@@ -10,30 +10,30 @@ const Navbar = () => {
             GYM SMART
           </Link>
           <div className="flex items-center space-x-8 max-lg:hidden">
-            <Link
-              to={""}
+            <a
+              href="#"
               className="text-lg hover:text-gray-300 hover:scale-105 transition-all duration-500"
             >
               Sobre nosotros
-            </Link>
-            <Link
-              to={""}
+            </a>
+            <a
+              href="#servicios"
               className="text-lg hover:text-gray-300 hover:scale-105 transition-all duration-500"
             >
               Servicios
-            </Link>
-            <Link
-              to={""}
+            </a>
+            <a
+              href="#elegirnos"
               className="text-lg hover:text-gray-300 hover:scale-105 transition-all duration-500"
             >
-              Precios
-            </Link>
-            <Link
-              to={""}
+              Por qué elegirnos
+            </a>
+            <a
+              href="#contactos"
               className="text-lg hover:text-gray-300 hover:scale-105 transition-all duration-500"
             >
               Contactanos
-            </Link>
+            </a>
             <Link
               to="/login"
               className="text-lg bg-black py-2 px-6 rounded-md hover:scale-105 transition duration-500 "

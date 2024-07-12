@@ -36,7 +36,8 @@ const CheckoutForm = ({ planId, userId, amount }) => {
     } else {
       try {
         const response = await fetch(
-          "http://localhost:3000/gym/smart/suscripciones/api/post/realizar-pago",
+          "https://gymsmart-backend.onrender.com/gym/smart/suscripciones/api/post/realizar-pago",
+          // "http://localhost:3000/gym/smart/suscripciones/api/post/realizar-pago",
           {
             method: "POST",
             headers: {

@@ -9,7 +9,8 @@ const News = () => {
     const fetchCourseSchedules = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/gym/smart/horarios-cursos/api/get/todos-horarios-cursos"
+          "https://gymsmart-backend.onrender.com/gym/smart/horarios-cursos/api/get/todos-horarios-cursos"
+          // "http://localhost:3000/gym/smart/horarios-cursos/api/get/todos-horarios-cursos"
         );
         setCourseSchedules(response.data);
       } catch (error) {

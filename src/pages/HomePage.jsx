@@ -14,7 +14,7 @@ const HomePage = () => {
         <nav className="max-w-screen-xl w-11/12 mx-auto">
           <Programs />
           <About />
-          <Suscripcions />
+          {/* <Suscripcions /> */}
           <Contact />
         </nav>
       </section>

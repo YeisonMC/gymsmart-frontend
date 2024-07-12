@@ -5,7 +5,7 @@ import GymSmart2 from "../../assets/img/landing/GymSmart2.png";
 
 const About = () => {
   return (
-    <nav className="py-32">
+    <nav className="py-32" id="elegirnos">
       <div className="grid grid-cols-2 max-lg:grid-cols-1 max-md:flex max-md:flex-col-reverse gap-6">
         <div>
           <div className="container">

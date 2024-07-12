@@ -6,7 +6,7 @@ import LevantamientoDePesas from "../../assets/img/home/levantamiento-de-pesas.p
 
 const Programs = () => {
   return (
-    <section className="mt-14 mb-32">
+    <section className="pt-24 mb-32" id="servicios">
       <div className="text-center ">
         <h1 className="text-white">Nuestros programas</h1>
         <h1 className="my-2 uppercase text-white font-bold text-4xl">
